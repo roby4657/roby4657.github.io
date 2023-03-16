@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 1500px;
+      }
+      .btn {
+        background-color: rgb(58, 52, 52);
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        color: white;
+        padding: 10px;
+        font-size: 11px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .project {
+        width: 100vw;
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+      /*--------------------------------------------*/
+      .portfolio-header {
+        height: 20%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 117, 252, 0.726),
+          rgba(122, 49, 204, 0.767)
+        );
+        position: relative;
+      }
+      .header-img {
+        position: absolute;
+        height: 80%;
+        right: 10%;
+        bottom: 0%;
+      }
+      .header-content {
+        display: inline-block;
+        width: 40%;
+        margin: 30px;
+        color: white;
+      }
+      /*--------------------------------------------*/
+      .portfolio-show {
+        height: 14%;
+      }
+      .show-flex {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .show-flex > h4 {
+        margin-bottom: 0px;
+      }
+      .show-flex > p {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+      .portfolio-4icons {
+        height: 15%;
+        background-color: rgba(122, 49, 204, 0.767);
+        color: white;
+        text-align: center;
+      }
+      .icons-title {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .icons-title > h4,
+      p {
+        margin: 0px;
+      }
+      .portfolio-4icons i {
+        position: absolute;
+        top: 38%;
+        left: 38%;
+        color: rgba(122, 49, 204, 0.767);
+      }
+      .icons-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 70%;
+      }
+      .icon-small-container {
+        height: 100%;
+        text-align: center;
+        margin: 5px;
+      }
+      .icon-small-container > p {
+        font-size: 10px;
+      }
+      .icon-small-container > h5 {
+        margin: 5px;
+      }
+
+      .icon-circle {
+        display: inline-block;
+        position: relative;
+        line-height: 80px;
+        background-color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+      }
+      /*--------------------------------------------------------*/
+      .portfolio-middle {
+        height: 5%;
+      }
+      .portfolio-middle {
+        text-align: center;
+      }
+      .portfolio-middle > p {
+        margin-top: 25px;
+        font-size: 14px;
+      }
+      .portfolio-middle > h4 {
+        margin: 0px;
+      }
+      /*--------------------------------------------------------*/
+
+      .portfolio-4img {
+        margin-left: auto;
+        margin-right: auto;
+        height: 34%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .img-container {
+        position: relative;
+        color: white;
+        width: 50%;
+        height: 50%;
+      }
+
+      .portfolio-4img img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .portfolio-4img h3 {
+        position: absolute;
+        left: 10%;
+        z-index: 1;
+      }
+      .portfolio-4img p {
+        position: absolute;
+        font-size: 10px;
+        left: 10%;
+        top: 30%;
+        z-index: 1;
+      }
+      .darkimg {
+        filter: brightness(0.5);
+        z-index: 0;
+      }
+
+      /*--------------------------------------------------------*/
+      .portfolio-sns {
+        height: 11%;
+      }
+      .sns-container{
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        height: 50%;
+      }
+      .sns-container>div{
+        margin: 10px;
+        color: white;
+        background-color: blueviolet;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      /*--------------------------------------------------------*/
+
+      .portfolio-copyright {
+        height: 1%;
+        text-align: center;
+      }
+      .portfolio-copyright>p{
+        font-size: small;
+      }
+      
+      
+      @media screen and (max-width: 576px){
+        .portfolio-header {
+        height: 30%;
+        text-align: center;
+      }
+      .header-img {
+        display: inline-block;
+        height: 50%;
+        right: 50%;
+        transform: translateX(+50%);
+      }
+      .header-content {
+        display: inline-block;
+        width: 40%;
+        margin: 30px;
+        color: white;
+      }
+        
+      }
+      .makeborder{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      .makeborder:hover{
+        box-sizing: border-box;
+        border: 10px solid white;
+        transition: all 1s;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="project portfolio-header">
+      <div class="header-content">
+        <h3>Landing Page for Apps</h3>
+        <p style="font-size: 10px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.Quos delectus
+          consectetur temporibus expedita tempore corporis tenetur illo?
+        </p>
+        <button class="btn header">Show More</button>
+      </div>
+      <img src="iphone.png" class="header-img" />
+    </div>
+
+    <div class="project portfolio-show">
+      <div class="show-flex">
+        <h4>It is the perfect theme for your next Project</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="btn show">Show Portfolio</button>
+      </div>
+    </div>
+
+    <div class="project portfolio-4icons">
+      <div class="icons-title">
+        <p>services</p>
+        <h4>What We Offer</h4>
+      </div>
+      <div style="display: inline-block">
+        <div class="icons-container">
+          <div class="icon-small-container">
+            <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+            <h5>Responsive</h5>
+            <p>lorem ipsume I love coding</p>
+          </div>
+          <div class="icon-small-container">
+            <div class="icon-circle"><i class="fa-solid fa-flask"></i></div>
+            <h5>Experiments</h5>
+            <p>lorem ipsume I love coding</p>
+          </div>
+          <div class="icon-small-container">
+            <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+            <h5>Quickness</h5>
+            <p>lorem ipsume I love coding</p>
+          </div>
+          <div class="icon-small-container">
+            <div class="icon-circle"><i class="fa-solid fa-globe"></i></div>
+            <h5>Global Shipping</h5>
+            <p>lorem ipsume I love coding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project portfolio-middle">
+      <p>Portfolio</p>
+      <h4>What we can Do</h4>
+    </div>
+
+    <div class="project portfolio-4img">
+        
+        
+      <div class="img-container">
+        <div class="makeborder"></div>
+        <h3>Stationary</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <img src="portfolio-1.jpg" class="darkimg" />
+    </div>
+      <div class="img-container">
+        <h3>Stationary</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <img src="portfolio-2.jpg" />
+      </div>
+      <div class="img-container">
+        <h3>Stationary</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <img src="portfolio-3.jpg" />
+      </div>
+      <div class="img-container">
+        <h3>Stationary</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <img src="portfolio-4.jpg" />
+      </div>
+    </div>
+
+    <div class="project portfolio-sns">
+      <div class="sns-container">
+        <div><i class="fa-brands fa-google"></i></div>
+        <div><i class="fa-brands fa-twitter"></i></div>
+        <div><i class="fa-brands fa-instagram"></i></div>
+      </div>
+    </div>
+
+    <div class="project portfolio-copyright">
+        <p>Copyright ⓒ 2023</p>
+    </div>
+    
+
+  </body>
+</html>
